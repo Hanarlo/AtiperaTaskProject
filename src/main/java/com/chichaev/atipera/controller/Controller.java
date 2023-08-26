@@ -23,9 +23,6 @@ class Controller {
     public ResponseEntity<Object> getRepositories(@PathVariable String username,
                                                   @RequestHeader("Accept") String acceptHeader) {
 
-//TODO
-// ИСправь все недочетіґґ. которіе біли в спортрадаре, не проебись
-
         if ("application/xml".equals(acceptHeader)) {
             return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE)
                     .body(new ErrorMessage(HttpStatus.NOT_ACCEPTABLE.value(), "XML format not supported."));
